@@ -38,7 +38,6 @@ function fetchWeatherData() {
             currentWeatherDiv.innerHTML = `
                 <div id="current-temp">${temp} °C</div>
                 <img src="${iconUrl}" alt="weather icon">
-                <p>${description.charAt(0).toUpperCase() + description.slice(1)}</p>
             `;
         })
         .catch(error => console.error("Error fetching current weather data: ", error));

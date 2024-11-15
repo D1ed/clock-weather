@@ -32,20 +32,25 @@ body {
 #current-time {
     font-weight: bold;
     font-size: 34vw;
-    color: #1DB954;
+    color: white;
     margin: 0;
 }
 
 #current-seconds {
     font-size: 8vw;
-    color: red;
+    color: white;
     margin-left: 8px; /* Пространство между временем и секундами */
+    position: absolute;
+    right: 1px;
+    bottom: 45%;
 }
 
 #current-date {
     margin-top: 10px; /* Пространство между временем и датой */
     font-size: 3.5vw;
     color: #ffffff;
+    position: absolute;
+    top: 55%;
 }
 
 #weather-container {
@@ -60,7 +65,7 @@ body {
 #current-weather, #forecast {
     width: 50%;
     box-sizing: border-box;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgb(37 33 33 / 10%);
     text-align: center;
     padding: 20px;
     font-size: 2vw;
@@ -73,10 +78,10 @@ body {
 
 #current-temp{
     font-size: 4vw;
+    font-size: 10vw;
 }
 
 #forecast div {
-    margin-bottom: 10px;
     font-size: 1.5vw;
     align-items: center;
 }
