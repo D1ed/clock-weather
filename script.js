@@ -36,7 +36,7 @@ function fetchWeatherData() {
             const description = data.weather[0].description;
 
             currentWeatherDiv.innerHTML = `
-                ${temp}°C
+                <div id="current-temp">${temp} °C</div>
                 <img src="${iconUrl}" alt="weather icon">
                 <p>${description.charAt(0).toUpperCase() + description.slice(1)}</p>
             `;
@@ -58,8 +58,8 @@ function fetchWeatherData() {
 
                 forecastDiv.innerHTML += `
                     <div>
-                        <strong>${date}</strong> - ${temp}°C
-                        <img src="${iconUrl}" alt="weather icon">
+                        <strong>${date}</strong>
+                        <img src="${iconUrl}" alt="weather icon">${temp} °C
                     </div>
                 `;
             });
