@@ -15,25 +15,25 @@ body {
 }
 
 #time-date {
-    top: 50%;
+    position: absolute;
     transform: translateY(-35%);
     width: 100%;
     text-align: center;
-    display: flex; /* Использование Flexbox */
-    justify-content: center; /* Центрирование по горизонтали */
-    align-items: center; /* Центрирование по вертикали */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #current-time {
     font-weight: bold;
-    font-size: 34vw; /* Гибкий размер шрифта в зависимости от ширины экрана */
+    font-size: 34vw;
     color: #1DB954;
     margin: 0;
 }
 
 #current-seconds {
     margin-bottom: 65px;
-    font-size: 8vw; /* Подстройка размера шрифта, чтобы синхронизировать его с основным временем */
+    font-size: 8vw;
     color: red;
     align-self: end;
 }
@@ -59,23 +59,52 @@ body {
     text-align: center;
     height: 400px;
     padding: 0px 20px 20px 20px;
-    font-size: 5vw;
+    font-size: 2vw; /* Уменьшаем дефолтный размер для мобильных */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #forecast div {
     margin-bottom: 10px;
-    font-size: 2vw;
-
+    font-size: 1.5vw; /* Уменьшаем для мобильных и удерживаем текст читаемым */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+@media (min-width: 1578px) and (min-height: 1165px) {
+    #current-time {
+        font-size: 34vw; /* Устанавливаем на большой экран */
+    }
+
+    #current-seconds {
+        font-size: 8vw;
+    }
+
+    #current-date {
+        font-size: 3.5vw;
+    }
+
+    #weather-container {
+        height: 400px;
+    }
+
+    #current-weather, #forecast {
+        font-size: 5vw;
+    }
+}
 
 @media (max-width: 480px) {
     #current-time {
         font-size: 12vw;
     }
+
     #current-date {
         font-size: 3vw;
     }
+
     #forecast div {
         font-size: 3vw;
     }
