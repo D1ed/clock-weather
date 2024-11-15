@@ -16,7 +16,7 @@ body {
 
 #time-date {
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-35%);
     width: 100%;
     text-align: center;
     display: flex; /* Использование Flexbox */
@@ -57,7 +57,7 @@ body {
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.1);
     text-align: center;
-    height: 350px;
+    height: 400px;
     padding: 0px 20px 20px 20px;
     font-size: 5vw;
 }
