@@ -1,0 +1,82 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#time-date {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    display: flex; /* Использование Flexbox */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+}
+
+#current-time {
+    font-weight: bold;
+    font-size: 34vw; /* Гибкий размер шрифта в зависимости от ширины экрана */
+    color: #1DB954;
+    margin: 0;
+}
+
+#current-seconds {
+    margin-bottom: 65px;
+    font-size: 8vw; /* Подстройка размера шрифта, чтобы синхронизировать его с основным временем */
+    color: red;
+    align-self: end;
+}
+
+#current-date {
+    position: absolute;
+    bottom: 10px;
+    font-size: 3.5vw;
+    color: #ffffff;
+}
+
+#weather-container {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#current-weather, #forecast {
+    width: 50%;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    height: 350px;
+    padding: 0px 20px 20px 20px;
+    font-size: 5vw;
+}
+
+#forecast div {
+    margin-bottom: 10px;
+    font-size: 2vw;
+
+}
+
+
+@media (max-width: 480px) {
+    #current-time {
+        font-size: 12vw;
+    }
+    #current-date {
+        font-size: 3vw;
+    }
+    #forecast div {
+        font-size: 3vw;
+    }
+}
