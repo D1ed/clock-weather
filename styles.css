@@ -15,13 +15,13 @@ body {
 }
 
 #time-date {
-    position: absolute;
-    transform: translateY(-35%);
     width: 100%;
     text-align: center;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    margin-bottom: 50px; /* Немного отступа снизу */
+    position: relative;
 }
 
 #current-time {
@@ -32,24 +32,25 @@ body {
 }
 
 #current-seconds {
-    margin-bottom: 65px;
     font-size: 8vw;
     color: red;
-    align-self: end;
+    align-self: flex-end;
 }
 
 #current-date {
-    position: absolute;
-    bottom: 10px;
+    margin-top: 10px; /* Пространство между секундомером и датой */
     font-size: 3.5vw;
     color: #ffffff;
+    align-self: flex-end; /* Выравнивание справа, если нужно */
 }
 
 #weather-container {
     display: flex;
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
+    height: 400px;
+    box-sizing: border-box;
 }
 
 #current-weather, #forecast {
@@ -57,43 +58,19 @@ body {
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.1);
     text-align: center;
-    height: 400px;
-    padding: 0px 20px 20px 20px;
-    font-size: 2vw; /* Уменьшаем дефолтный размер для мобильных */
+    padding: 20px;
+    font-size: 2vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 #forecast div {
     margin-bottom: 10px;
-    font-size: 1.5vw; /* Уменьшаем для мобильных и удерживаем текст читаемым */
-    display: flex;
-    flex-direction: column;
+    font-size: 1.5vw;
     align-items: center;
-}
-
-@media (min-width: 1578px) and (min-height: 1165px) {
-    #current-time {
-        font-size: 34vw; /* Устанавливаем на большой экран */
-    }
-
-    #current-seconds {
-        font-size: 8vw;
-    }
-
-    #current-date {
-        font-size: 3.5vw;
-    }
-
-    #weather-container {
-        height: 400px;
-    }
-
-    #current-weather, #forecast {
-        font-size: 5vw;
-    }
 }
 
 @media (max-width: 480px) {
